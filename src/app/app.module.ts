@@ -1,16 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SbUserMgmtModule } from 'sb-user-mgmt';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCommonModule} from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { GridModule, PagerModule } from '@syncfusion/ej2-angular-grids';
+import { UserManagementModule } from 'user-management';
 
 @NgModule({
   declarations: [
@@ -19,14 +13,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SbUserMgmtModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    MatCommonModule,
-    MatSelectModule,
-    MatInputModule,
-    MatIconModule,
-    FormsModule
+    GridModule, PagerModule,
+    UserManagementModule
   ],
   providers: [],
   bootstrap: [AppComponent]
