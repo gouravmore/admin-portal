@@ -8,11 +8,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { ListUserComponent } from './list-user/list-user.component';
+import { MatTableModule } from '@angular/material/table'  ;
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { ActiveInactiveUserDialogComponent } from './active-inactive-user-dialog/active-inactive-user-dialog.component';
+import { MatDialogModule } from "@angular/material/dialog";
 
 
 @NgModule({
-  declarations: [SbUserMgmtComponent],
+  declarations: [SbUserMgmtComponent, ListUserComponent, ActiveInactiveUserDialogComponent],
   imports: [
     BrowserAnimationsModule,
     MatTabsModule,
@@ -21,7 +26,11 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatButtonModule,
+    MatTooltipModule,
+    MatDialogModule
   ],
   exports: [SbUserMgmtComponent]
 })
