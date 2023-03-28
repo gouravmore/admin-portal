@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "sb-user-mgmt": [
-        "dist/sb-user-mgmt/sb-user-mgmt",
-        "dist/sb-user-mgmt"
+      "sb-user-management": [
+        "dist/sb-user-management/sb-user-management",
+        "dist/sb-user-management"
       ]
     }
   },

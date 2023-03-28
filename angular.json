@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "admin-portal": {
+    "primeng-project": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/admin-portal",
+            "outputPath": "dist/primeng-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -67,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "admin-portal:build"
+            "browserTarget": "primeng-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "admin-portal:build:production"
+              "browserTarget": "primeng-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "admin-portal:build"
+            "browserTarget": "primeng-project:build"
           }
         },
         "test": {
@@ -93,8 +88,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -116,48 +110,48 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "admin-portal:serve"
+            "devServerTarget": "primeng-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "admin-portal:serve:production"
+              "devServerTarget": "primeng-project:serve:production"
             }
           }
         }
       }
     },
-    "sb-user-mgmt": {
+    "sb-user-management": {
       "projectType": "library",
-      "root": "projects/sb-user-mgmt",
-      "sourceRoot": "projects/sb-user-mgmt/src",
+      "root": "projects/sb-user-management",
+      "sourceRoot": "projects/sb-user-management/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/sb-user-mgmt/tsconfig.lib.json",
-            "project": "projects/sb-user-mgmt/ng-package.json"
+            "tsConfig": "projects/sb-user-management/tsconfig.lib.json",
+            "project": "projects/sb-user-management/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/sb-user-mgmt/tsconfig.lib.prod.json"
+              "tsConfig": "projects/sb-user-management/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/sb-user-mgmt/src/test.ts",
-            "tsConfig": "projects/sb-user-mgmt/tsconfig.spec.json",
-            "karmaConfig": "projects/sb-user-mgmt/karma.conf.js"
+            "main": "projects/sb-user-management/src/test.ts",
+            "tsConfig": "projects/sb-user-management/tsconfig.spec.json",
+            "karmaConfig": "projects/sb-user-management/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/sb-user-mgmt/tsconfig.lib.json",
-              "projects/sb-user-mgmt/tsconfig.spec.json"
+              "projects/sb-user-management/tsconfig.lib.json",
+              "projects/sb-user-management/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -165,7 +159,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "admin-portal"
+    }},
+  "defaultProject": "primeng-project"
 }
